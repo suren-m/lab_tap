@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -18,9 +15,10 @@ namespace TapLab.Lab01.Helpers
 
         public static async Task<int> DelayedReturnAsync(int seconds, CancellationToken ct = default)
         {
-            // replace below line with actual implementation
-            return await Task.FromResult(default(int)); 
+            await Task.Delay(TimeSpan.FromSeconds(seconds), ct);
+            return seconds;
         }
+
 
 
 
@@ -34,13 +32,15 @@ namespace TapLab.Lab01.Helpers
         {
             try
             {
-                // replace below line with actual implementation
-                await Task.CompletedTask;
+                var cts = new CancellationTokenSource(TimeSpan.FromSeconds(secondsToCancel));
+                var res = await AsyncHelpers.DelayedReturnAsync(seconds, cts.Token);
+                Console.WriteLine(res);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
         }
+
     }
 }

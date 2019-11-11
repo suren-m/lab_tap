@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
+using TapLab.Lab01;
 using TapLab.Lab01.Helpers;
 
 namespace TapLab
@@ -17,6 +18,7 @@ namespace TapLab
             //await AsyncHelpers.Test_DelayedReturnAsync(2, 1); // should print task cancelled exception
 
 
+            // await Combinator.FirstComeFirstServe();
 
 
 
@@ -25,7 +27,7 @@ namespace TapLab
 
             await Task.CompletedTask;
            
-            Console.WriteLine("\nMain Completed. Press Any Key to Exit\n");
+            Console.WriteLine("\nMain Completed. Press Enter to Exit\n");
             Console.ReadLine();
         }
 
