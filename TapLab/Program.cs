@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using TapLab.Lab01;
 using TapLab.Lab01.Helpers;
+using TapLab.Lab02;
 
 namespace TapLab
 {
@@ -19,6 +20,8 @@ namespace TapLab
 
 
             // await Combinator.FirstComeFirstServe();
+
+            // await Compute.ComputeSquareParallel();
 
 
 
