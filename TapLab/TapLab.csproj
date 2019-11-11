@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="Lab01\Combinator.cs" />
     <Compile Include="Lab01\Helpers\AsyncHelpers.cs" />
+    <Compile Include="Lab02\Compute.cs" />
+    <Compile Include="Lab03\AsyncException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
